@@ -13,6 +13,8 @@ namespace Simple.Web.Windsor.Owin
         {
             builder.Use(typeof(CustomTracer));
             builder.Map("/resources", sw => sw.UseSimpleWeb());
+            builder.UseStaticFiles("/Scripts", "Scripts");
+            builder.UseStaticFiles("/Content", "Content");
         }
     }
 
